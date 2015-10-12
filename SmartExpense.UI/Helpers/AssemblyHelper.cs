@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace SmartExpense.UI.Helpers
 {
-    class AssemblyHelper
+    using System.Reflection;
+
+    public static class AssemblyHelper
     {
+        public static Type GetViewType(this Assembly assembly, string viewTypeName)
+        {
+            var types = assembly.GetTypes();
+            foreach (var type in types)
+            {
+                if (type.FullName == viewTypeName) return type;
+            }
+            return null;
+
+        }
     }
 }

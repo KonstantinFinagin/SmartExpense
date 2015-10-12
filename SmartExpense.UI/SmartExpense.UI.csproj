@@ -101,6 +101,8 @@
     </Compile>
     <Compile Include="Helpers\AssemblyHelper.cs" />
     <Compile Include="Helpers\UnityContainerHelper.cs" />
+    <Compile Include="Messages\ResumeStateMessage.cs" />
+    <Compile Include="Messages\SuspendStateMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +132,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Konstantin\.nuget\packages\Unity\4.0.1\lib\win8\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartExpense.UILogic\SmartExpense.UILogic.csproj">
+      <Project>{60A907EF-C764-4C9F-81FB-D00AFB55F154}</Project>
+      <Name>SmartExpense.UILogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
